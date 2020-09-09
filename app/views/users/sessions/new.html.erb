@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag "login", :media => "all" %>
+
+
+<div class="signup">
+  <div class="head-new">
+    <h1>Chiller</h1>
+  </div>
+  
+  <div class="login">
+
+    <h2>ログイン</h2>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :Eメール %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+
+      <div class="field">
+        <%= f.label :パスワード %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :ログイン状態を保持 %>
+        </div>
+      <% end %>
+
+      <div class="actions-log">
+        <%= f.submit "ログイン" %>
+      </div>
+    <% end %>
+
+    <%= render "users/shared/links" %>
+  </div>
+ 
+
+</div>

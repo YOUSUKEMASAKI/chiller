@@ -1,0 +1,54 @@
+ <%= stylesheet_link_tag "home", :media => "all" %>
+
+    <div class="head row">
+        <h1>Chiller</h1>
+        <div class="sign row ">
+            <div class="sign-up">
+                <button type="button" class="btn  btn-primary">
+                    <%=link_to '新規登録' , new_user_registration_path , class: "btn-sign"%>
+                </button>
+            </div>
+            <div class="sign-in">
+                <button type="button" class="btn  btn-primary">
+                    <%=link_to 'ログイン' , tweets_path , class: "btn-sign"%>
+                </button>
+            </div>
+            <div class="sign-goo">
+                <button type="button" class="btn  btn-success">
+                    <%= link_to 'Googleでログイン',    user_google_oauth2_omniauth_authorize_path , class: "btn-sign"%>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="body">
+       <h1>このサービスは<br>貴方の落ち着ける空間を共有するサービスです。</h1>
+
+       <div class="sign body-sign">
+            <div class="sign-up">
+                <button type="button" class="btn  btn-primary">
+                    <%=link_to '新規登録' , new_user_registration_path , class: "btn-sign"%>
+                </button>
+            </div>
+            <div class="sign-in">
+                <button type="button" class="btn  btn-primary">
+                    <%=link_to 'ログイン' , tweets_path , class: "btn-sign"%>
+                </button>
+            </div>
+            <div class="sign-goo">
+                <button type="button" class="btn  btn-success">
+                    <%= link_to 'Googleでログイン',    user_google_oauth2_omniauth_authorize_path , class: "btn-sign"%>
+                </button>
+            </div>
+        </div>
+
+       <div class="body-container">
+            <h2>Chillerとは？</h2>
+            <p>Chill out(落ち着く、癒し)が語源です。<br>新型コロナの影響で私達の生活は大きく変化しました。<br>そんな今だからこそ、<br>Chill outできる時間が必要です。<br>このサービスは多くの方の落ち着ける場所や時間を<br>共有できるサービスです。<br></p>
+       </div>
+      
+
+    </div>
+       
+    
+

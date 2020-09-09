@@ -1,0 +1,160 @@
+
+
+.head{
+    background-color: aqua;
+    width:auto ;
+}
+
+.head > h1{
+    font-family: Monotype Corsiva;
+    opacity: 0.85;
+    margin-top: 5px;
+    padding-top: 6px;
+    padding-left: 30px;
+    font-size: 40px;  
+}
+
+.sign{
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.sign-in , .sign-up , .sign-goo{
+    margin-left: 8px;
+}
+
+.btn-sign{
+    color: rgb(26, 88, 45);
+}
+
+
+
+.body{
+    height: 750px;
+    background: image-url('ocean.jpg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+
+.body > h1{
+    text-align: center;
+    padding-top: 60px;
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    font-weight: bolder;
+    opacity: 0.85;
+    font-size: 28px;
+}
+
+.body-sign{
+    display: none;
+}
+
+.body-container{
+   background-color: rgba($color:skyblue, $alpha: 0.75);
+   text-align: center;
+   margin: 100px 120px 0 120px;
+   border-radius: 20px;
+}
+
+.body-container > h2{
+    color: green;
+    padding:30px 0 15px 0 ;
+}
+
+.body-container > p{
+    font-size: 20px;
+    font-weight: bolder;
+    opacity: 0.7;
+    padding-bottom: 30px;
+}
+
+
+
+@media screen and (max-width: 500px){
+    .sign{
+        display: none;
+    }
+
+    .head > h1{
+        margin: 0 auto ;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .body{
+        height: 550px;
+    }
+
+    .body > h1{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .body-sign{
+        display: block;
+        text-align: center;
+    }
+
+    .sign-in , .sign-up , .sign-goo{
+        margin-top: 10px;
+    }
+
+    .body{
+        height: 590px;
+    }
+
+    .body-container{
+        margin: 40px 8px 0 8px;
+     }
+     
+     .body-container > h2{
+         padding:30px 0 15px 0 ;
+         font-size:26px ;
+     }
+     
+     .body-container > p{
+         font-size: 12px;
+         line-height: 20px;
+     }
+
+     body{
+        overflow-x: hidden;
+    }
+}
+
+
+@media only screen and (min-width:501px) and (max-width:760px) {
+
+    .body > h1{
+        padding-top: 80px;
+        font-size: 19px;
+    }
+
+    .body{
+        height: 750px;
+    }
+
+    .body-container{
+        margin: 80px 20px 0 20px;
+     }
+     
+     .body-container > h2{
+         padding:30px 0 15px 0 ;
+         font-size:26px ;
+     }
+     
+     .body-container > p{
+         font-size: 17px;
+     }
+
+
+     
+
+}
+
+
+
+
+

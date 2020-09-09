@@ -1,0 +1,89 @@
+.favorites-head{
+    background-color: skyblue;
+    display: flex;
+}
+
+.favorites-head >p{
+    font-family:Monotype Corsiva;
+    padding: 7px 0 0 5px;
+    margin:0;
+    font-weight: bolder;
+    opacity: 0.85;
+    font-size: 28px;
+}
+
+.link-favorites-head{
+    color:rgb(51, 50, 50);
+    font-weight: bolder;
+    opacity: 0.85;
+    font-size: 14px;
+}
+
+.favorite-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+
+.favorites-body{
+    border: solid 2px rgba(135, 207, 235, 0.562);
+    border-radius: 5px;
+    width: 950px;
+    height: 230px;
+    margin:15px auto 0 auto;
+}
+
+.favorites-tweet{
+    width: 850px;
+    margin: 0 auto 0 auto; 
+    display: flex;
+}
+
+.favorites-tweet-body{
+    display: flex;
+    flex-direction: column;
+}
+
+.favorites-body-body-box{
+    width: 600px;
+    height: 150px;
+    margin: 10px 0 0 10px;
+    border-radius: 10px;
+    background-color:rgba(205, 232, 243, 0.308);
+}
+
+.favorites-img{
+    margin-top:10px ;
+}
+
+.favorite-tweet-info{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 780px){
+
+    .favorites-body{
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        height: 490px;
+    }
+
+    .favorites-tweet{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    }
+
+    .favorites-body-body-box{
+        width: 295px;
+        height: 200px;
+        margin-left: 0;
+    }
+
+    .favorites-img{
+        margin: 10px 0 0 20px;
+    }
+}

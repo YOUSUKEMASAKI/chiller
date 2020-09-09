@@ -1,0 +1,66 @@
+.tweet_edit_head{
+    background-color: skyblue;
+    display: flex;
+}
+
+.tweet_edit_head > p{
+    font-family:Monotype Corsiva;
+    padding: 7px 0 0 5px;
+    margin:0;
+    font-weight: bolder;
+    opacity: 0.85;
+    font-size: 28px;
+}
+
+.link_tweet_edit_head{
+    color:rgb(51, 50, 50);
+    font-weight: bolder;
+    opacity: 0.85;
+    font-size: 14px;
+}
+
+.edit-body{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.edit-body-body{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 150px;
+    background-color: rgba(240, 233, 221, 0.233);
+    border: solid 1px skyblue;
+    border-radius: 10px;
+}
+
+.edit-body-img{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.edit-body-edit{
+    width: 110px;
+    background-color: aqua;
+    border: solid 1px skyblue;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(56, 53, 53, 0.829);
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+@media screen and (max-width:500px){
+    
+    .edit-body-body{
+        width: 290px;
+        height: 340px;
+    }
+}

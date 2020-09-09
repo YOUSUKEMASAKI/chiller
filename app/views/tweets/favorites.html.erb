@@ -1,0 +1,31 @@
+<%= stylesheet_link_tag "favorites", :media => "all" %>
+
+<div class="favorites-head">
+    <p>Chiller</p>
+    <button type="button" class="btn  btn-primary btn-link-new-edit">
+    <%=link_to "投稿一覧" ,tweets_path , class:"link-favorites-head"%>
+    </button>
+</div>
+
+    <h2 class="favorite-title">いいねした投稿</h2>
+<div class="favorites-body">
+        <%current_user.liked_tweets.each do |t|%>
+    <div class="favorites-tweet">
+        <div class="favorites-img">
+            <%= image_tag t.image_url, size: "250x200" if t.image?  %>
+        </div>
+          <div class="favorites-tweet-body">
+          <div class="favorites-body-body-box">
+          <div class="favorites-body-body">
+            <%=t.body%>
+          </div>
+          </div>
+           <div class="favorite-tweet-info">
+            <%=t.user.name%>
+            (♡<%=t.liked_users.count%>)
+            <%=t.created_at %>
+           </div>
+          </div>
+        <%end%>
+    </div>
+</div>

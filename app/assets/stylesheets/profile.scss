@@ -1,0 +1,106 @@
+.profile{
+    text-align: center;
+}
+
+.profile > h1{
+    font-family: monospace;
+    font-weight:bolder;
+    opacity: 0.8;
+    font-size: 30px;
+    padding-top:20px ;
+}
+
+.profile-list , .profile-list > p{
+   background-color:aqua;
+}
+
+.profile-list {
+    width: 400px;
+    margin: 0 auto 0 auto;
+    padding: 15px 0 15px 0;
+    border-radius: 15px;  
+    box-shadow: 3px 3px ;
+}
+
+.profile-list > p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.edit-tweets{
+    margin: 20px 0 20px 0;
+}
+
+.edit-tweets-box{
+    margin-top:5px ;
+}
+
+.link-edit-tweets{
+    font-weight: bolder;
+    color:rgb(25, 16, 66);
+    opacity: 0.7;
+    padding :3px 20px 3px 20px;
+}
+
+
+.mytweet{
+    border: solid 2px rgba(135, 207, 235, 0.562);
+    border-radius: 5px;
+    width: 950px;
+    height: 230px;
+    display: flex;
+    margin-bottom:30px ;
+}
+.mytweets{
+    width: 850px;
+    margin: 0 auto 0 auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+.mytweet-body{
+    text-align: left;
+    word-break: break-all;
+}
+
+.mytweet-body-box{
+    width: 600px;
+    height: 150px;
+    margin: 10px 0 0 10px;
+    border-radius: 10px;
+    background-color:rgba(205, 232, 243, 0.308);
+}
+
+.mytweet-img{
+    border-radius: 50px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 780px){
+    .profile-list{
+        width: 300px;
+    }
+
+    .mytweets{
+        display: flex;
+        justify-content: center;
+        width: 300px;
+    }
+
+    .mytweet{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 490px;
+    }
+
+    .mytweet-body-box{
+        width: 295px;
+        height: 200px;
+        margin-left: 0;
+    }
+
+    .mytweet-img{
+        margin: 10px 0 0 0;
+    }
+}

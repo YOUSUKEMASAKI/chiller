@@ -1,0 +1,99 @@
+<%= stylesheet_link_tag "tweets_index", :media => "all" %>
+
+<div class="tweets_header">
+<p>Chiller</p>
+  <div class="tweets_header_buttons">
+    <button type="button" class="btn  btn-primary tweets-botton">
+      <%=link_to '新規投稿' , new_tweet_path , class:        "tweets_header_button"%>
+    </button>
+     <button type="button" class="btn  btn-primary tweets-botton">
+      <%= link_to "マイページ", user_path(current_user.id) , class: "tweets_header_button"%>
+    </button> 
+    <button type="button" class="btn  btn-primary tweets-botton">
+      <%=link_to "いいねした投稿",  favorites_tweets_path , class: "tweets_header_button"%>
+    </button> 
+    <button type="button" class="btn  btn-success tweets-botton">
+      <%=link_to 'ログアウト' , destroy_user_session_path,method: :delete , class: "tweets_header_button"%>
+    </button>
+  </div>
+</div>
+
+<div class="tweets_header_media">
+<p>Chiller</p>
+  <div class="tweets_header_buttons_media">
+    
+      <%=link_to '新規投稿' , new_tweet_path , class:        "tweets_header_button_media"%>
+    
+      <%= link_to "マイページ", user_path(current_user.id) , class: "tweets_header_button_media"%>
+   
+      <%=link_to "いいねした投稿",  favorites_tweets_path , class: "tweets_header_button_media"%>
+   
+      <%=link_to 'ログアウト' , destroy_user_session_path,method: :delete , class: "tweets_header_button_media"%>
+    
+  </div>
+</div>
+
+<div class="search">
+    <%= search_form_for(@q, url: tweets_path, method: :get) do |f| %>
+  <div class ="search-bottons">
+  
+      <%= f.label :性別 , class:"search-title"%>
+  
+      <%= f.radio_button :gender_eq,:'',{:checked => true}%>全て
+      <%= f.radio_button :gender_eq, :'男性' %>男性
+      <%= f.radio_button :gender_eq, :'女性' %>女性
+  
+  </div>
+
+  <div class ="search-bottons">
+
+    <%= f.label :年代 , class:"search-title"%>
+   
+  
+    <%= f.radio_button :age_eq, :'' ,{:checked => true}%>全て
+    <%= f.radio_button :age_eq, :'10代' %>10代
+    <%= f.radio_button :age_eq, :'20代' %>20代
+    <%= f.radio_button :age_eq, :'30代' %>30代
+    <%= f.radio_button :age_eq, :'40代' %>40代
+    <%= f.radio_button :age_eq, :'50代' %>50代
+    <%= f.radio_button :age_eq, :'60代' %>60代以上
+    <%= f.submit "検索する" , class:"tweets-search"%>
+  </div>
+    <% end %>
+</div>
+
+ <div class="mytweets">
+    <% @users.each do |u| %>
+        <% u.tweets.each do |t| %>
+    <div class="tweet">
+         <div class="mytweet-img">
+          <%= image_tag t.image_url, size: "250x200" if t.image? %>
+         </div>
+         <div>
+          <div class="mytweet-body-box">
+            <div class="mytweet-body">
+              <%=t.body%>
+            </div>
+          </div>
+            <p class="likes">いいね ❤<%= t.liked_users.count %>
+            </p>
+            <p class="tweet-info">
+            <%=t.created_at %>
+            <%=link_to 'ツイート詳細' , tweet_path(t.id) , class:"tweet-detail"%>
+            <%=link_to '編集' , edit_tweet_path(t.id) %>
+            <%=link_to '消去' , tweet_path(t.id) , method: :delete%>
+            <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
+            <%=t.user.age%>
+            <%=t.user.gender%>
+            </p>
+         </div>
+    </div>
+         <% end %>
+    <% end %>
+ </div>
+
+
+    
+
+
+

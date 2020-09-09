@@ -1,0 +1,85 @@
+.tweet-show-head{
+    background-color: skyblue;
+    display: flex;
+}
+
+.tweet-show-head > p{
+    font-family:Monotype Corsiva;
+    padding: 7px 0 0 5px;
+    margin:0;
+    font-weight: bolder;
+    opacity: 0.85;
+    font-size: 28px;
+}
+
+.link-tweet-show-head{
+    color:rgb(51, 50, 50);
+    font-weight: bolder;
+    opacity: 0.85;
+    font-size: 14px;
+}
+
+.tweet-show-body{
+    border: solid 2px rgba(135, 207, 235, 0.562);
+    border-radius: 5px;
+    width: 950px;
+    height: 230px;
+    display: flex;
+    margin: 20px auto 10px auto;
+}
+
+.likes-count{
+    display: flex;
+    margin-left: 10px;
+    margin-top:10px ;
+}
+
+.likes-count > p{
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+.link-likes-count{
+    border: solid 3px rgba(230, 81, 185, 0.76);
+    border-radius: 3px;
+    font-weight: bolder;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 790px){
+    .tweet-show-body{
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 490px;
+    }
+
+    .tweet-show-body{
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .mytweet-body-box{
+        width: 295px;
+        height: 200px;
+        margin-left: 0;
+    }
+
+    .likes-count{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .likes-count-box{
+        display: flex;
+        height: 30px;
+    }
+
+    .likes-count-box > p{
+        margin-left: 10px;
+        margin-top: 3px;
+    }
+}

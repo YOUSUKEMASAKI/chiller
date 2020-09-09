@@ -1,0 +1,54 @@
+<%= stylesheet_link_tag "user_edit", :media => "all" %>
+<% resource_name.to_s.humanize %>
+
+<div class="profile-edit-head">
+  <p>Chiller</p>
+  <button type="button" class="btn  btn-primary btn-link-new-edit">
+  <%=link_to '戻る' , user_path(current_user.id) , class:"link-user-path"%>
+  </button>
+</div>
+
+<div class="profile-edit-body">
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "users/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%=f.label :ニックネーム ,     class:"field-item"%><br/>
+    <%=f.text_field :name, autofocus: true,autocomplete: "name" , class:"field-item-link"%>
+  </div>
+
+  <div class="field">
+    <%=f.label :年代  ,     class:"field-item"%><br/>
+    <%=f.select :age,['10代','20代','30代','40代','50代','60代以上'],{include_blank:'選択'}, class:"field-item-link"%>
+  </div>
+
+  <div class="field">
+    <%=f.label :性別  ,     class:"field-item"%><br/>
+    <%=f.select :gender,['男性','女性','その他'],{include_blank:'選択'}, class:"field-item-link"%>
+  </div>
+
+  <div class="field">
+    <%=f.label :属性  ,     class:"field-item"%><br/>
+    <%=f.select :jobs,['社会人','学生','無職'],{include_blank:'選択'}, class:"field-item-link"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :Eメール  ,     class:"field-item"%><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" , class:"field-item-link"%>
+  </div>
+
+  
+
+  <div class="field">
+    <%= f.label :パスワード ,     class:"field-item"%> <br />
+    <%= f.password_field :current_password, autocomplete: "current-password" , class:"field-item-link"%>
+  </div>
+
+  <div class="field">
+    <%= f.submit " 更新する " , class:"field-renew"%>
+  </div>
+</div>
+<% end %>
+
+
+

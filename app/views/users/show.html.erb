@@ -1,0 +1,53 @@
+<%= stylesheet_link_tag "profile", :media => "all" %>
+
+<div class="profile">
+    <h1>プロフィール</h1>
+
+    <div class="profile-list">
+        <p>ニックネーム：<%=@user.name%></p>
+        <p>年代：<%=@user.age%></p>
+        <p>性別：<%=@user.gender%></p>
+        <p>属性：<%=@user.jobs%></p>
+    </div>
+
+    <div class="edit-tweets">
+        <%if current_user.id==@user.id%>
+        <button type="btn" class="btn  btn-info  edit-tweets-box">
+            <%=link_to "プロフィールを編集",  edit_user_registration_path , class:"link-edit-tweets"%>
+        </button>
+        <%end%>
+    
+        <button type="button" class="btn  btn-primary edit-tweets-box">
+            <%=link_to "みんなの投稿を見る" , tweets_path , class:"link-edit-tweets"%>
+        </button>    
+
+         <button type="button" class="btn  btn-primary edit-tweets-box">
+        <%=link_to '新規投稿をする' , new_tweet_path , class:"link-edit-tweets"%>
+        </button>   
+     </div>
+    
+    <div class="mytweets">
+        <% @user.tweets.each do |t| %>
+        <div class="mytweet">
+            <div class="mytweet-img">
+                 <%= image_tag t.image_url, size:  "250x200" if t.image?  %>
+            </div>
+            <div>
+              <div class="mytweet-body-box">
+                <div class="mytweet-body">
+                    <%=t.body%>
+                </div>
+              </div>
+                <div class="mytweet-created">
+                    <%=t.created_at %>
+                </div>
+                <%=link_to '編集' , edit_tweet_path(t.id) %>
+                <%=link_to '消去' , tweet_path(t.id) , method: :delete%>
+            </div>
+        </div>
+        <%end%>
+    <div>
+</div>
+
+
+ 

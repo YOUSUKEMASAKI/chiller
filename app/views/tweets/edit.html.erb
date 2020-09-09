@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "tweet_edit", :media => "all" %>
+
+<div class="tweet_edit_head">
+    <p>Chiller</p>
+
+    <button type="button" class="btn  btn-primary btn-link-new-edit">
+    <%=link_to '投稿一覧へ' , tweets_path , class:"link_tweet_edit_head"%>
+    </button>
+</div>
+
+
+    <%=form_for @tweet do |f|%>
+<div class="edit-body">
+        <%=f.text_field :body ,:size=>500 , class:"edit-body-body"%>
+    <div class="edit-body-img">
+        <p>画像変更</p>
+        <%=f.file_field :image%>
+    </div>
+        <%=f.submit '編集する' , class: "edit-body-edit"%>
+</div>
+    <%end%>
+

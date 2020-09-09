@@ -1,0 +1,74 @@
+.head-new{
+    background-color: aqua;
+    width:auto ;
+    height: 50px;
+}
+
+.head-new > h1{
+    font-family: Monotype Corsiva;
+    opacity: 0.85;
+    padding-top: 6px;
+    padding-left: 30px;
+    font-size: 40px;  
+}
+
+.signup{
+    background: image-url('ocean.jpg');
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+
+    height: 800px;
+}
+
+.signup-new{
+    margin: 0 auto 0 auto;
+    text-align: center;
+    background-color: rgba($color:skyblue, $alpha: 0.75);
+    width: 500px;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+
+.signup-new > h2{
+    padding-top:40px ;
+    font-weight: bolder;
+    opacity: 0.8;
+}
+
+.field{
+    margin-top:20px ;
+    text-align: center;
+}
+
+.label-new{
+    font-weight: bolder;
+    opacity: 0.9;
+}
+
+.form-new{
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-radius: 7px;
+}
+
+.actions-new{
+    margin: 15px 0 15px 0 ;
+}
+
+@media screen and (max-width: 500px){
+    .head-new > h1{
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .signup-new{
+        width: 300px;
+    }
+
+    .form-new{
+        width: 200px;
+    }
+}
+
