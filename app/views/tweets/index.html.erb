@@ -80,8 +80,10 @@
             <p class="tweet-info">
             <%=t.created_at %>
             <%=link_to 'ツイート詳細' , tweet_path(t.id) , class:"tweet-detail"%>
+            <% if user_signed_in? && current_user.id == t.user_id %>
             <%=link_to '編集' , edit_tweet_path(t.id) %>
             <%=link_to '消去' , tweet_path(t.id) , method: :delete%>
+            <%end%>
             <a href="/users/<%= t.user.id %>"><%= t.user.name %></a>
             <%=t.user.age%>
             <%=t.user.gender%>
