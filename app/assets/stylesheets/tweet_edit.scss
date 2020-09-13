@@ -1,52 +1,44 @@
-.tweet_edit_head{
-    background-color: skyblue;
-    display: flex;
-}
-
-.tweet_edit_head > p{
-    font-family:Monotype Corsiva;
-    padding: 7px 0 0 5px;
-    margin:0;
-    font-weight: bolder;
-    opacity: 0.85;
-    font-size: 28px;
-}
-
-.link_tweet_edit_head{
-    color:rgb(51, 50, 50);
-    font-weight: bolder;
-    opacity: 0.85;
-    font-size: 14px;
+.tweet-edit{
+    height: 1500px;
+    background: image-url('profile.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    text-align: center;
 }
 
 .edit-body{
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 100px;
 }
 
 .edit-body-body{
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
-    height: 150px;
-    background-color: rgba(240, 233, 221, 0.233);
+    width: 700px;
+    height: 160px;
+    background-color: rgba(240, 233, 221, 0.712);
     border: solid 1px skyblue;
     border-radius: 10px;
 }
 
 .edit-body-img{
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 450px;
+    background-color: rgba(255, 255, 255, 0.597);
+    border-radius: 3px;
     display: flex;
-    font-size: 14px;
+    font-size: 20px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .edit-body-edit{
-    width: 110px;
+    width: 220px;
     background-color: aqua;
     border: solid 1px skyblue;
     border-radius: 3px;
@@ -54,13 +46,29 @@
     margin-right: auto;
     color: rgba(56, 53, 53, 0.829);
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 @media screen and (max-width:500px){
+
+    .edit-body{
+        margin-top: 20px;
+    }
     
     .edit-body-body{
         width: 290px;
         height: 340px;
+    }
+
+    .edit-body-img{
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 13px;
+        width: 300px;
+    }
+
+    .edit-body-edit{
+        font-size: 14px;
+        width: 120px;
     }
 }

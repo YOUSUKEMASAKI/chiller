@@ -1,5 +1,9 @@
 <%= stylesheet_link_tag "profile", :media => "all" %>
 
+<div class="head row">
+        <h1>Chiller</h1>
+</div>
+
 <div class="profile">
     <h1>プロフィール</h1>
 
@@ -41,8 +45,10 @@
                 <div class="mytweet-created">
                     <%=t.created_at %>
                 </div>
-                <%=link_to '編集' , edit_tweet_path(t.id) %>
-                <%=link_to '消去' , tweet_path(t.id) , method: :delete%>
+                <% if user_signed_in? && current_user.id == t.user_id %>
+                <%=link_to '編集' , edit_tweet_path(t.id) , class:"mytweet-created"%>
+                <%=link_to '消去' , tweet_path(t.id) , method: :delete , class:"mytweet-created"%>
+                <%end%>
             </div>
         </div>
         <%end%>

@@ -1,22 +1,29 @@
 .profile{
+    height: 1500px;
+    background: image-url('profile.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
     text-align: center;
 }
 
 .profile > h1{
     font-family: monospace;
     font-weight:bolder;
-    opacity: 0.8;
-    font-size: 30px;
-    padding-top:20px ;
-}
-
-.profile-list , .profile-list > p{
-   background-color:aqua;
+    opacity: 0.9;
+    font-size: 36px;
+    padding-top:100px ;
+    color: white;
 }
 
 .profile-list {
-    width: 400px;
-    margin: 0 auto 0 auto;
+    background-color:rgba(105, 123, 131, 0.493);
+}
+
+.profile-list {
+    width: 750px;
+    margin: 60px auto 50px auto;
     padding: 15px 0 15px 0;
     border-radius: 15px;  
     box-shadow: 3px 3px ;
@@ -24,10 +31,12 @@
 
 .profile-list > p{
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 22px;
 }
 
 .edit-tweets{
-    margin: 20px 0 20px 0;
+    margin: 20px 0 50px 0;
 }
 
 .edit-tweets-box{
@@ -43,8 +52,7 @@
 
 
 .mytweet{
-    border: solid 2px rgba(135, 207, 235, 0.562);
-    border-radius: 5px;
+    border-bottom: solid 2px rgba(109, 108, 106, 0.801);
     width: 950px;
     height: 230px;
     display: flex;
@@ -67,18 +75,36 @@
     height: 150px;
     margin: 10px 0 0 10px;
     border-radius: 10px;
-    background-color:rgba(205, 232, 243, 0.308);
+    background-color:rgba(205, 232, 243, 0.603);
 }
 
 .mytweet-img{
-    border-radius: 50px;
     margin-left: 40px;
     margin-top: 10px;
 }
 
+.mytweet-created{
+    color: white;
+}
+
 @media screen and (max-width: 780px){
+    .profile > h1{
+        padding-top:25px ;
+        font-size: 28px;
+    }
+
     .profile-list{
         width: 300px;
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .profile-list > p{
+        font-size: 18px;
+    }
+
+    .edit-tweets{
+        margin-bottom: 20px;
     }
 
     .mytweets{

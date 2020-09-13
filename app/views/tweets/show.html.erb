@@ -1,10 +1,10 @@
 <%= stylesheet_link_tag "tweet_show", :media => "all" %>
 
-<div class="tweet-show-head">
-    <p>Chiller</p>
-    <button type="button" class="btn  btn-primary btn-link-new-edit">
-    <%=link_to '投稿一覧へ' , tweets_path , class:"link-tweet-show-head"%>
-    </button>
+<div class="favorites">
+
+<div class="head row favorite-head-title">
+    <h1>Chiller</h1>
+    <%=link_to "投稿一覧へ" ,tweets_path , class:"link-favorites-head"%>
 </div>
 
 <div class="tweet-show-body">
@@ -26,13 +26,17 @@
         <%end%>
         <p>いいね件数: <%= @tweet.likes.count %></p>
       </div>
+      <div class="likes-count-time">
         <%=@tweet.created_at%>
         <%@tweet.liked_users.each do |user|%>
+      </div>
     </div>
     <%end%>
   </div>
 
 
+
+</div>
 
 </div>
 

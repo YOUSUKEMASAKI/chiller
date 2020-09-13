@@ -1,65 +1,52 @@
-.favorites-head{
-    background-color: skyblue;
-    display: flex;
+.favorites{
+    height: 1500px;
+    background: image-url('profile.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    text-align: center;
 }
 
-.favorites-head >p{
-    font-family:Monotype Corsiva;
-    padding: 7px 0 0 5px;
-    margin:0;
-    font-weight: bolder;
-    opacity: 0.85;
-    font-size: 28px;
+.favorite-head-title{
+    font-size: 20px;
+    color: white;
+    border-bottom: solid 1px white;
 }
 
 .link-favorites-head{
-    color:rgb(51, 50, 50);
-    font-weight: bolder;
-    opacity: 0.85;
-    font-size: 14px;
+    color: white;
+    margin-left: auto;
+    padding: 35px 40px 0 0;
 }
 
 .favorite-title{
+    color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bolder;
-    margin-top: 15px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
-.favorites-body{
-    border: solid 2px rgba(135, 207, 235, 0.562);
-    border-radius: 5px;
-    width: 950px;
-    height: 230px;
-    margin:15px auto 0 auto;
-}
 
-.favorites-tweet{
-    width: 850px;
-    margin: 0 auto 0 auto; 
-    display: flex;
-}
+@media screen and (max-width: 501px){
+    .favorite-head-title > h1{
+        font-size: 32px;
+    }
 
-.favorites-tweet-body{
-    display: flex;
-    flex-direction: column;
-}
+    .link-favorites-head{
+        font-size: 15px;
+        color: white;
+        margin-left: auto;
+        padding: 20px 40px 0 0;
+    }
 
-.favorites-body-body-box{
-    width: 600px;
-    height: 150px;
-    margin: 10px 0 0 10px;
-    border-radius: 10px;
-    background-color:rgba(205, 232, 243, 0.308);
-}
-
-.favorites-img{
-    margin-top:10px ;
-}
-
-.favorite-tweet-info{
-    margin-left: 10px;
-    margin-top: 10px;
+    .favorite-title{
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width: 780px){

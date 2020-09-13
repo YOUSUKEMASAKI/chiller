@@ -1,15 +1,28 @@
+.signup-head{
+    background-color:rgba(56, 56, 54, 0.747);
+    width:auto ;
+    height: 80px;
+}
+
 .login{
     margin: 0 auto 0 auto;
     text-align: center;
-    background-color: rgba($color:skyblue, $alpha: 0.75);
+    background-color: rgba(76, 85, 134, 0.716);
     width: 500px;
     border-radius: 15px;
-    margin-top: 50px;
+    margin-top: 120px;
 }
 
 .login > h2{
+    color: aliceblue;
+   font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体" ;
     padding-top:40px ;
     font-weight: bolder;
+    opacity: 0.8;
+}
+
+.login-label{
+    color: aliceblue;
     opacity: 0.8;
 }
 
@@ -18,13 +31,25 @@
     margin-top: 20px;
 }
 
+.actions-log-btn{
+    border-radius: 3px;
+    border: none;
+   padding: 5px 10px;
+}
+
 @media screen and (max-width: 500px){
+    .head-new{
+        height: 55px;
+    }
+
     .head-new > h1{
         text-align: center;
         padding-left: 0;
+        font-size: 36px;
     }
 
     .login{
         width: 300px;
+        margin-top: 50px;
     }
 }

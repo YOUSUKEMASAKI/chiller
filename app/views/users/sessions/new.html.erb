@@ -5,35 +5,38 @@
   <div class="head-new">
     <h1>Chiller</h1>
   </div>
-  
+
   <div class="login">
+
 
     <h2>ログイン</h2>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
-        <%= f.label :Eメール %><br />
+        <%= f.label :Eメール , class:"login-label"%><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
 
       <div class="field">
-        <%= f.label :パスワード %><br />
+        <%= f.label :パスワード , class:"login-label"%><br />
         <%= f.password_field :password, autocomplete: "current-password" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
         <div class="field">
           <%= f.check_box :remember_me %>
-          <%= f.label :ログイン状態を保持 %>
+          <%= f.label :ログイン状態を保持 , class:"login-label"%>
         </div>
       <% end %>
 
       <div class="actions-log">
-        <%= f.submit "ログイン" %>
+        <%= f.submit "ログイン" ,class:"actions-log-btn"%>
       </div>
     <% end %>
 
+  
     <%= render "users/shared/links" %>
-  </div>
+</div>
+  
  
 
 </div>

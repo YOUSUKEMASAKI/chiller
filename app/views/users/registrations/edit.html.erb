@@ -1,14 +1,13 @@
 <%= stylesheet_link_tag "user_edit", :media => "all" %>
 <% resource_name.to_s.humanize %>
 
-<div class="profile-edit-head">
-  <p>Chiller</p>
-  <button type="button" class="btn  btn-primary btn-link-new-edit">
-  <%=link_to '戻る' , user_path(current_user.id) , class:"link-user-path"%>
-  </button>
-</div>
+
+
 
 <div class="profile-edit-body">
+  <div class="head row ">
+    <h1 class="head-edit-title">Chiller</h1>
+  </div>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
@@ -47,6 +46,10 @@
   <div class="field">
     <%= f.submit " 更新する " , class:"field-renew"%>
   </div>
+ 
+    <button type="button" class="btn  btn-primary btn-link-new-edit">
+    <%=link_to '戻る' , user_path(current_user.id) , class:"link-user-path"%>
+    </button>
 </div>
 <% end %>
 
